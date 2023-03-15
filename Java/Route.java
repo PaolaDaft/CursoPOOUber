@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 class Route {
-    Integer id;}
+    Integer id;
     ArrayList<Double> start;
     ArrayList<Double> end;
 }
