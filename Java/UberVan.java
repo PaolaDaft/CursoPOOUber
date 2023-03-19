@@ -1,11 +1,19 @@
-class UberVan extends Car {
-    Map<String, ArrayList<String, Integer>> typeCarAccepted;
-    ArrayList<String> seatsMaterial;
+import java.util.ArrayList;
+import java.util.Map;
 
-    public UberVan(String license, Account driver, Map<String, ArrayList<String, Integer>> typeCarAccepted, ArrayList<String> seatsMaterial){
+class UberVan extends Car {
+    Map<String, Map<String, Integer>> typeCarAccepted;
+    ArrayList<String> seatsMaterial; 
+
+    public UberVan(String license, Account driver, Map<String, Map<String, Integer>> typeCarAccepted, ArrayList<String> seatsMaterial){
         super(license, driver);
         this.typeCarAccepted = typeCarAccepted;
         this.seatsMaterial = seatsMaterial;
+    }
+
+    // Un costructor más simple | para fines practicos 
+    public UberVan (String license, Account driver){
+        super(license, driver);
     }
     
 }
