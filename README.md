@@ -6,3 +6,77 @@ Para resolver un problema como desarrollador es de gran utilidad dividirlo en su
 Si te interesa saber más sobre el curso te dejo los siguientes enlaces:
 - 🔗 [Curso](https://platzi.com/cursos/oop/)
 - 🔗 [Slides de la clase ](https://static.platzi.com/media/public/uploads/programacion-orientada-a-objetos-poo_c4774196-cfdb-412e-bae5-210a97d78f8b.pdf)
+
+```mermaid
+---
+title: Uber UML
+---
+classDiagram
+    Account <|-- Driver
+    
+    Car --> Driver
+    Trip --> User
+    Car <|-- UberX
+    Car <|-- UberPool
+    Car <|-- UberBlack
+    Car <|-- UberVan
+    Payment <|-- Cash
+    Payment <|-- Card 
+    Payment <|-- PayPal
+    Trip *-- Car
+    Trip *-- Route
+    Trip *-- Payment
+    Account <|-- User
+
+    class Account{
+        +int id
+        +str name
+        +str document 
+        +str email
+        +str password   
+    }
+    class Car{
+        +int id
+        +str license
+        +str driver 
+        +str passengers
+    }
+    class UberX{
+        +str brand
+        +str model
+    }
+    class UberPool{
+        +str brand
+        +str model
+    }
+    class UberBlack{
+        +typeCarAccepted
+        +seatsMaterial
+    }
+    class UberVan{
+        +typeCarAccepted
+        +seatsMaterial
+    }
+    class Trip{
+        + route
+        +car
+        +payment
+    }
+    class Route{
+        +origin 
+        +destination
+    }
+    class Payment{
+        +int id
+        +float cost
+    }
+    class Card{
+        +int number
+        +int cvv
+        +str date         
+    }
+    class PayPal{
+        +str email
+    }
+
+```
